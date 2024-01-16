@@ -1,0 +1,77 @@
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  border: 1px solid rgb(173, 175, 177);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+div > div {
+  background-image: url("https://drapestory.in/cdn/shop/files/DS516D_1.jpg?v=1685620243");
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+div > div:hover {
+  background-image: url("https://m.media-amazon.com/images/I/71V2dgdvBzL._AC_UF894,1000_QL80_.jpg");
+  background-size: cover;
+  transition: ease;
+  transition-duration: 0.4s;
+  height: 300px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(173, 175, 177);
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  position: relative;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  background-color: #b9ac7a;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+button:not(:hover)::before {
+  width: 0;
+  right: 0;
+  left: auto;
+}
